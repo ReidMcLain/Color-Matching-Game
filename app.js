@@ -75,6 +75,8 @@ function check4Winner() {
         let winSound = new Audio("./DemonSlayerSounds.mp3")
         winSound.volume = 0.5;
         winSound.play();
+        NineBoxes.style.display = 'flex';
+        FourBoxes.style.display = 'none';
     }
     if (greenCount == 4) {
         setTimeout(function () {
@@ -83,6 +85,8 @@ function check4Winner() {
         let winSound = new Audio("./DemonSlayerSounds.mp3")
         winSound.volume = 0.5;
         winSound.play();
+        NineBoxes.style.display = 'flex';
+        FourBoxes.style.display = 'none';
     }
     if (blueCount == 4) {
         setTimeout(function () {
@@ -91,6 +95,8 @@ function check4Winner() {
         let winSound = new Audio("./DemonSlayerSounds.mp3")
         winSound.volume = 0.5;
         winSound.play();
+        NineBoxes.style.display = 'flex';
+        FourBoxes.style.display = 'none';
     }
 }
 
