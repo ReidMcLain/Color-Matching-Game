@@ -59,34 +59,34 @@ function check4Winner() {
         }
     }
     if (redCount == 4) {
-        document.getElementById('DSS').play();
         setTimeout(function () {
+            document.getElementById('DSS').play();
             alert('You won!!!')
-        }, 100);
+        }, 200);
         NineBoxes.style.display = 'flex';
         FourBoxes.style.display = 'none';
     }
     if (yellowCount == 4) {
-        document.getElementById('DSS').play();
         setTimeout(function () {
+            document.getElementById('DSS').play();
             alert('You won!!!')
-        }, 100);
+        }, 200);
         NineBoxes.style.display = 'flex';
         FourBoxes.style.display = 'none';
     }
     if (greenCount == 4) {
-        document.getElementById('DSS').play();
         setTimeout(function () {
+            document.getElementById('DSS').play();
             alert('You won!!!')
-        }, 100);
+        }, 200);
         NineBoxes.style.display = 'flex';
         FourBoxes.style.display = 'none';
     }
     if (blueCount == 4) {
-        document.getElementById('DSS').play();
         setTimeout(function () {
+            document.getElementById('DSS').play();
             alert('You won!!!')
-        }, 100);
+        }, 200);
         NineBoxes.style.display = 'flex';
         FourBoxes.style.display = 'none';
     }
@@ -109,27 +109,27 @@ function check9Winner() {
         }
     }
     if (redCount == 9) {
-        document.getElementById('DSS').play();
         setTimeout(function () {
+            document.getElementById('DSS').play();
             alert('You won!!!')
-        }, 100);
+        }, 200);
     }
     if (yellowCount == 9) {
-        document.getElementById('DSS').play();
         setTimeout(function () {
+            document.getElementById('DSS').play();
             alert('You won!!!')
-        }, 100);
+        }, 200);
     }
     if (greenCount == 9) {
-        document.getElementById('DSS').play();
         setTimeout(function () {
+            document.getElementById('DSS').play();
             alert('You won!!!')
-        }, 100);
+        }, 200);
     }
     if (blueCount == 9) {
-        document.getElementById('DSS').play();
         setTimeout(function () {
+            document.getElementById('DSS').play();
             alert('You won!!!')
-        }, 100);
+        }, 200);
     }
 }
