@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./GiyuPattern.jpg");
+  height: 100vh;
+  flex-direction: column;
+}
+
+#nav {
+  margin-bottom: 100px;
+  font-size: 50px;
+  background-color: #69face;
+}
+
+#NineBoxes {
+  width: 306px;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#FourBoxes {
+  width: 204px;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#FourBox1 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#FourBox2 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#FourBox3 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#FourBox4 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#NineBox1 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#NineBox2 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#NineBox3 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#NineBox4 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#NineBox5 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#NineBox6 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#NineBox7 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#NineBox8 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+#NineBox9 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
