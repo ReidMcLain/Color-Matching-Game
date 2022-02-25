@@ -59,42 +59,42 @@ function check4Winner() {
         }
     }
     if (redCount == 4) {
+        winSound.play();
         setTimeout(function () {
             alert('You won!!!')
         }, 100);
         let winSound = new Audio("./DemonSlayerSounds.mp3")
         winSound.volume = 0.5;
-        winSound.play();
         NineBoxes.style.display = 'flex';
         FourBoxes.style.display = 'none';
     }
     if (yellowCount == 4) {
+        winSound.play();
         setTimeout(function () {
             alert('You won!!!')
         }, 100);
         let winSound = new Audio("./DemonSlayerSounds.mp3")
         winSound.volume = 0.5;
-        winSound.play();
         NineBoxes.style.display = 'flex';
         FourBoxes.style.display = 'none';
     }
     if (greenCount == 4) {
+        winSound.play();
         setTimeout(function () {
             alert('You won!!!')
         }, 100);
         let winSound = new Audio("./DemonSlayerSounds.mp3")
         winSound.volume = 0.5;
-        winSound.play();
         NineBoxes.style.display = 'flex';
         FourBoxes.style.display = 'none';
     }
     if (blueCount == 4) {
+        winSound.play();
         setTimeout(function () {
             alert('You won!!!')
         }, 100);
         let winSound = new Audio("./DemonSlayerSounds.mp3")
         winSound.volume = 0.5;
-        winSound.play();
         NineBoxes.style.display = 'flex';
         FourBoxes.style.display = 'none';
     }
@@ -117,35 +117,35 @@ function check9Winner() {
         }
     }
     if (redCount == 9) {
+        winSound.play();
         setTimeout(function () {
             alert('You won!!!')
         }, 100);
         let winSound = new Audio("./DemonSlayerSounds.mp3")
         winSound.volume = 0.5;
-        winSound.play();
     }
     if (yellowCount == 9) {
+        winSound.play();
         setTimeout(function () {
             alert('You won!!!')
         }, 100);
         let winSound = new Audio("./DemonSlayerSounds.mp3")
         winSound.volume = 0.5;
-        winSound.play();
     }
     if (greenCount == 9) {
+        winSound.play();
         setTimeout(function () {
             alert('You won!!!')
         }, 100);
         let winSound = new Audio("./DemonSlayerSounds.mp3")
         winSound.volume = 0.5;
-        winSound.play();
     }
     if (blueCount == 9) {
+        winSound.play();
         setTimeout(function () {
             alert('You won!!!')
         }, 100);
         let winSound = new Audio("./DemonSlayerSounds.mp3")
         winSound.volume = 0.5;
-        winSound.play();
     }
 }
