@@ -18,6 +18,20 @@ body {
   background-color: #f5f5f5;
 }
 
+#instructions {
+  margin-top: 100px;
+  font-size: 25px;
+  background-color: #f5f5f5;
+}
+
+#FourBoxes {
+  width: 204px;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #NineBoxes {
   width: 306px;
   flex-wrap: wrap;
@@ -26,8 +40,8 @@ body {
   justify-content: center;
 }
 
-#FourBoxes {
-  width: 204px;
+#SixteenBoxes {
+  width: 408px;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
@@ -149,3 +163,146 @@ body {
     border-color: #000000;
     border-style: solid;
 }
+
+#SixteenBox1 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox2 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox3 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox4 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox5 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox6 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox7 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox8 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+#SixteenBox9 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox10 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox11 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox12 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox13 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox14 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#SixteenBox15 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+#SixteenBox16 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
