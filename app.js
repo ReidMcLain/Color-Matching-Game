@@ -9,11 +9,8 @@ NineBoxes.style.display = 'none';
 SixteenBoxes.style.display = 'none';
 TwentyFiveBoxes.style.display = 'none';
 
-nav2.style.display = 'none';
 Lv2.style.display = 'none';
-nav3.style.display = 'none';
 Lv3.style.display = 'none';
-nav4.style.display = 'none';
 Lv4.style.display = 'none';
 
 FourBox1.addEventListener('click', setRandom4Color)
@@ -145,9 +142,7 @@ function check4Winner() {
                 audio.currentTime = 0;
                 NineBoxes.style.display = 'flex';
                 FourBoxes.style.display = 'none';
-                nav2.style.display = 'flex';
                 Lv2.style.display = 'flex';
-                nav1.style.display = 'none';
                 Lv1.style.display = 'none';
             }
         }, 200)
@@ -162,9 +157,7 @@ function check4Winner() {
                 audio.currentTime = 0;
                 NineBoxes.style.display = 'flex';
                 FourBoxes.style.display = 'none';
-                nav2.style.display = 'flex';
                 Lv2.style.display = 'flex';
-                nav1.style.display = 'none';
                 Lv1.style.display = 'none';
             }
         }, 200)
@@ -179,9 +172,7 @@ function check4Winner() {
                 audio.currentTime = 0;
                 NineBoxes.style.display = 'flex';
                 FourBoxes.style.display = 'none';
-                nav2.style.display = 'flex';
                 Lv2.style.display = 'flex';
-                nav1.style.display = 'none';
                 Lv1.style.display = 'none';
             }
         }, 200)
@@ -196,9 +187,7 @@ function check4Winner() {
                 audio.currentTime = 0;
                 NineBoxes.style.display = 'flex';
                 FourBoxes.style.display = 'none';
-                nav2.style.display = 'flex';
                 Lv2.style.display = 'flex';
-                nav1.style.display = 'none';
                 Lv1.style.display = 'none';
             }
         }, 200)
@@ -231,9 +220,7 @@ function check9Winner() {
                 audio.currentTime = 0;
                 SixteenBoxes.style.display = 'flex';
                 NineBoxes.style.display = 'none';
-                nav3.style.display = 'flex';
                 Lv3.style.display = 'flex';
-                nav2.style.display = 'none';
                 Lv2.style.display = 'none';
             }
         }, 200)
@@ -248,9 +235,7 @@ function check9Winner() {
                 audio.currentTime = 0;
                 SixteenBoxes.style.display = 'flex';
                 NineBoxes.style.display = 'none';
-                nav3.style.display = 'flex';
                 Lv3.style.display = 'flex';
-                nav2.style.display = 'none';
                 Lv2.style.display = 'none';
             }
         }, 200)
@@ -265,9 +250,7 @@ function check9Winner() {
                 audio.currentTime = 0;
                 SixteenBoxes.style.display = 'flex';
                 NineBoxes.style.display = 'none';
-                nav3.style.display = 'flex';
                 Lv3.style.display = 'flex';
-                nav2.style.display = 'none';
                 Lv2.style.display = 'none';
             }
         }, 200)
@@ -282,9 +265,7 @@ function check9Winner() {
                 audio.currentTime = 0;
                 SixteenBoxes.style.display = 'flex';
                 NineBoxes.style.display = 'none';
-                nav3.style.display = 'flex';
                 Lv3.style.display = 'flex';
-                nav2.style.display = 'none';
                 Lv2.style.display = 'none';
             }
         }, 200)
@@ -317,9 +298,7 @@ function check16Winner() {
                 audio.currentTime = 0;
                 TwentyFiveBoxes.style.display = 'flex';
                 SixteenBoxes.style.display = 'none';
-                nav4.style.display = 'flex';
                 Lv4.style.display = 'flex';
-                nav3.style.display = 'none';
                 Lv3.style.display = 'none';
             }
         }, 200)
@@ -334,9 +313,7 @@ function check16Winner() {
                 audio.currentTime = 0;
                 TwentyFiveBoxes.style.display = 'flex';
                 SixteenBoxes.style.display = 'none';
-                nav4.style.display = 'flex';
                 Lv4.style.display = 'flex';
-                nav3.style.display = 'none';
                 Lv3.style.display = 'none';
             }
         }, 200)
@@ -351,9 +328,7 @@ function check16Winner() {
                 audio.currentTime = 0;
                 TwentyFiveBoxes.style.display = 'flex';
                 SixteenBoxes.style.display = 'none';
-                nav4.style.display = 'flex';
                 Lv4.style.display = 'flex';
-                nav3.style.display = 'none';
                 Lv3.style.display = 'none';
             }
         }, 200)
@@ -368,9 +343,7 @@ function check16Winner() {
                 audio.currentTime = 0;
                 TwentyFiveBoxes.style.display = 'flex';
                 SixteenBoxes.style.display = 'none';
-                nav4.style.display = 'flex';
                 Lv4.style.display = 'flex';
-                nav3.style.display = 'none';
                 Lv3.style.display = 'none';
             }
         }, 200)

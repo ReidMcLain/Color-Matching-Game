@@ -14,56 +14,61 @@ body {
   min-width: 100vh;
 }
 
-#nav1 {
-  font-size: 50px;
-  background-color: #008000;
+#nav {
+  margin-bottom: 15px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 100px;
+  background-color: #69face;
   border-radius: 15px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
 }
 
 #Lv1 {
-  margin-bottom: 100px;
+  padding: 5px;
+  margin-bottom: 50px;
   font-size: 50px;
   background-color: #008000;
   border-radius: 15px;
-}
-
-#nav2 {
-  font-size: 50px;
-  background-color: #FFFF00;
-  border-radius: 15px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
 }
 
 #Lv2 {
-  margin-bottom: 100px;
+  padding: 5px;
+  margin-bottom: 50px;
   font-size: 50px;
   background-color: #FFFF00;
   border-radius: 15px;
-}
-
-#nav3 {
-  font-size: 50px;
-  background-color: #FFA500;
-  border-radius: 15px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
 }
 
 #Lv3 {
-  margin-bottom: 100px;
+  padding: 5px;
+  margin-bottom: 50px;
   font-size: 50px;
   background-color: #FFA500;
   border-radius: 15px;
-}
-
-#nav4 {
-  font-size: 50px;
-  background-color: #FF0000;
-  border-radius: 15px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
 }
 
 #Lv4 {
-  margin-bottom: 100px;
+  padding: 5px;
+  margin-bottom: 50px;
   font-size: 50px;
   background-color: #FF0000;
   border-radius: 15px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
 }
 
 #instructions {
