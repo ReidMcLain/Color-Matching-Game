@@ -1,31 +1,84 @@
 body {
   margin: 0;
+  background-image: url("./GiyuPattern.jpg");
+  min-height: 100vh;
+  min-width: 100vh;
 }
 
 .container {
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("./GiyuPattern.jpg");
-  height: 100vh;
   flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vh;
 }
 
-#nav {
+#nav1 {
+  font-size: 50px;
+  background-color: #008000;
+  border-radius: 15px;
+}
+
+#Lv1 {
   margin-bottom: 100px;
   font-size: 50px;
-  background-color: #f5f5f5;
+  background-color: #008000;
+  border-radius: 15px;
+}
+
+#nav2 {
+  font-size: 50px;
+  background-color: #FFFF00;
+  border-radius: 15px;
+}
+
+#Lv2 {
+  margin-bottom: 100px;
+  font-size: 50px;
+  background-color: #FFFF00;
+  border-radius: 15px;
+}
+
+#nav3 {
+  font-size: 50px;
+  background-color: #FFA500;
+  border-radius: 15px;
+}
+
+#Lv3 {
+  margin-bottom: 100px;
+  font-size: 50px;
+  background-color: #FFA500;
+  border-radius: 15px;
+}
+
+#nav4 {
+  font-size: 50px;
+  background-color: #FF0000;
+  border-radius: 15px;
+}
+
+#Lv4 {
+  margin-bottom: 100px;
+  font-size: 50px;
+  background-color: #FF0000;
+  border-radius: 15px;
 }
 
 #instructions {
   margin-top: 100px;
   font-size: 25px;
-  background-color: #f5f5f5;
+  background-color: #69face;
+  border-radius: 50px;
+  padding: 10px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
 }
 
 #FourBoxes {
-  width: 204px;
+  width: 205px;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
@@ -33,7 +86,8 @@ body {
 }
 
 #NineBoxes {
-  width: 306px;
+  width: 325px;
+  height: 306px;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
@@ -41,7 +95,15 @@ body {
 }
 
 #SixteenBoxes {
-  width: 408px;
+  width: 440px;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#TwentyFiveBoxes {
+  width: 550px;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
@@ -297,6 +359,7 @@ body {
     border-color: #000000;
     border-style: solid;
 }
+
 #SixteenBox16 {
   background-color: #f5f5f5;
   height: 100px;
@@ -306,3 +369,225 @@ body {
     border-style: solid;
 }
 
+#TwentyFiveBox1 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox2 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox3 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox4 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox5 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox6 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox7 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox8 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+#TwentyFiveBox9 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox10 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox11 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox12 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox13 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox14 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox15 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox16 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox17 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox18 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox19 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox20 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox21 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox22 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox23 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+#TwentyFiveBox24 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}
+#TwentyFiveBox25 {
+  background-color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  border: 1px;
+    border-color: #000000;
+    border-style: solid;
+}

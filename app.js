@@ -1,9 +1,20 @@
-let colors = ['yellow', 'red', 'green', 'blue']
+let colors = ['yellow', 'red', 'green', 'orange']
 
 const FourBoxes = document.getElementById('FourBoxes');
 const NineBoxes = document.getElementById('NineBoxes');
+const SixteenBoxes = document.getElementById('SixteenBoxes');
+const TwentyFiveBoxes = document.getElementById('TwentyFiveBoxes');
+
 NineBoxes.style.display = 'none';
 SixteenBoxes.style.display = 'none';
+TwentyFiveBoxes.style.display = 'none';
+
+nav2.style.display = 'none';
+Lv2.style.display = 'none';
+nav3.style.display = 'none';
+Lv3.style.display = 'none';
+nav4.style.display = 'none';
+Lv4.style.display = 'none';
 
 FourBox1.addEventListener('click', setRandom4Color)
 FourBox2.addEventListener('click', setRandom4Color)
@@ -37,6 +48,32 @@ SixteenBox14.addEventListener('click', setRandom16Color)
 SixteenBox15.addEventListener('click', setRandom16Color)
 SixteenBox16.addEventListener('click', setRandom16Color)
 
+TwentyFiveBox1.addEventListener('click', setRandom25Color)
+TwentyFiveBox2.addEventListener('click', setRandom25Color)
+TwentyFiveBox3.addEventListener('click', setRandom25Color)
+TwentyFiveBox4.addEventListener('click', setRandom25Color)
+TwentyFiveBox5.addEventListener('click', setRandom25Color)
+TwentyFiveBox6.addEventListener('click', setRandom25Color)
+TwentyFiveBox7.addEventListener('click', setRandom25Color)
+TwentyFiveBox8.addEventListener('click', setRandom25Color)
+TwentyFiveBox9.addEventListener('click', setRandom25Color)
+TwentyFiveBox10.addEventListener('click', setRandom25Color)
+TwentyFiveBox11.addEventListener('click', setRandom25Color)
+TwentyFiveBox12.addEventListener('click', setRandom25Color)
+TwentyFiveBox13.addEventListener('click', setRandom25Color)
+TwentyFiveBox14.addEventListener('click', setRandom25Color)
+TwentyFiveBox15.addEventListener('click', setRandom25Color)
+TwentyFiveBox16.addEventListener('click', setRandom25Color)
+TwentyFiveBox17.addEventListener('click', setRandom25Color)
+TwentyFiveBox18.addEventListener('click', setRandom25Color)
+TwentyFiveBox19.addEventListener('click', setRandom25Color)
+TwentyFiveBox20.addEventListener('click', setRandom25Color)
+TwentyFiveBox21.addEventListener('click', setRandom25Color)
+TwentyFiveBox22.addEventListener('click', setRandom25Color)
+TwentyFiveBox23.addEventListener('click', setRandom25Color)
+TwentyFiveBox24.addEventListener('click', setRandom25Color)
+TwentyFiveBox25.addEventListener('click', setRandom25Color)
+
 function setRandom4Color(event) {
     let randomNum = Math.floor(Math.random() * colors.length);
     if (colors[randomNum] == event.target.style.backgroundColor) {
@@ -67,148 +104,341 @@ function setRandom16Color(event) {
     }
 };
 
+function setRandom25Color(event) {
+    let randomNum = Math.floor(Math.random() * colors.length);
+    if (colors[randomNum] == event.target.style.backgroundColor) {
+        setRandom25Color(event);
+    } else {
+        event.target.style.backgroundColor = colors[randomNum];
+        check25Winner();
+    }
+};
+
 let FourBoxArray = [FourBox1, FourBox2, FourBox3, FourBox4]
 let NineBoxArray = [NineBox1, NineBox2, NineBox3, NineBox4, NineBox5, NineBox6, NineBox7, NineBox8, NineBox9]
 let SixteenBoxArray = [SixteenBox1, SixteenBox2, SixteenBox3, SixteenBox4, SixteenBox5, SixteenBox6, SixteenBox7, SixteenBox8, SixteenBox9, SixteenBox10, SixteenBox11, SixteenBox12, SixteenBox13, SixteenBox14, SixteenBox15, SixteenBox16]
+let TwentyFiveBoxArray = [TwentyFiveBox1, TwentyFiveBox2, TwentyFiveBox3, TwentyFiveBox4, TwentyFiveBox5, TwentyFiveBox6, TwentyFiveBox7, TwentyFiveBox8, TwentyFiveBox9, TwentyFiveBox10, TwentyFiveBox11, TwentyFiveBox12, TwentyFiveBox13, TwentyFiveBox14, TwentyFiveBox15, TwentyFiveBox16, TwentyFiveBox17, TwentyFiveBox18, TwentyFiveBox19, TwentyFiveBox20, TwentyFiveBox21, TwentyFiveBox22, TwentyFiveBox23, TwentyFiveBox24, TwentyFiveBox25]
 
 function check4Winner() {
     let redCount = 0
     let yellowCount = 0
-    let blueCount = 0
+    let orangeCount = 0
     let greenCount = 0
     for (let i = 0; i < FourBoxArray.length; i++) {
         if (FourBoxArray[i].style.backgroundColor == 'red') {
             redCount++
         } else if (FourBoxArray[i].style.backgroundColor == 'yellow') {
             yellowCount++
-        } else if (FourBoxArray[i].style.backgroundColor == 'blue') {
-            blueCount++
+        } else if (FourBoxArray[i].style.backgroundColor == 'orange') {
+            orangeCount++
         } else if (FourBoxArray[i].style.backgroundColor == 'green') {
             greenCount++
         }
     }
     if (redCount == 4) {
-        document.getElementById('DSS').play();
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
-        NineBoxes.style.display = 'flex';
-        FourBoxes.style.display = 'none';
+            const confirmBox = confirm('Level 1 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                NineBoxes.style.display = 'flex';
+                FourBoxes.style.display = 'none';
+                nav2.style.display = 'flex';
+                Lv2.style.display = 'flex';
+                nav1.style.display = 'none';
+                Lv1.style.display = 'none';
+            }
+        }, 200)
     }
     if (yellowCount == 4) {
-        document.getElementById('DSS').play();
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
-        NineBoxes.style.display = 'flex';
-        FourBoxes.style.display = 'none';
+            const confirmBox = confirm('Level 1 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                NineBoxes.style.display = 'flex';
+                FourBoxes.style.display = 'none';
+                nav2.style.display = 'flex';
+                Lv2.style.display = 'flex';
+                nav1.style.display = 'none';
+                Lv1.style.display = 'none';
+            }
+        }, 200)
     }
     if (greenCount == 4) {
-        document.getElementById('DSS').play();
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
-        NineBoxes.style.display = 'flex';
-        FourBoxes.style.display = 'none';
+            const confirmBox = confirm('Level 1 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                NineBoxes.style.display = 'flex';
+                FourBoxes.style.display = 'none';
+                nav2.style.display = 'flex';
+                Lv2.style.display = 'flex';
+                nav1.style.display = 'none';
+                Lv1.style.display = 'none';
+            }
+        }, 200)
     }
-    if (blueCount == 4) {
-        document.getElementById('DSS').play();
+    if (orangeCount == 4) {
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
-        NineBoxes.style.display = 'flex';
-        FourBoxes.style.display = 'none';
+            const confirmBox = confirm('Level 1 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                NineBoxes.style.display = 'flex';
+                FourBoxes.style.display = 'none';
+                nav2.style.display = 'flex';
+                Lv2.style.display = 'flex';
+                nav1.style.display = 'none';
+                Lv1.style.display = 'none';
+            }
+        }, 200)
     }
 }
 
 function check9Winner() {
     let redCount = 0
     let yellowCount = 0
-    let blueCount = 0
+    let orangeCount = 0
     let greenCount = 0
     for (let i = 0; i < NineBoxArray.length; i++) {
         if (NineBoxArray[i].style.backgroundColor == 'red') {
             redCount++
         } else if (NineBoxArray[i].style.backgroundColor == 'yellow') {
             yellowCount++
-        } else if (NineBoxArray[i].style.backgroundColor == 'blue') {
-            blueCount++
+        } else if (NineBoxArray[i].style.backgroundColor == 'orange') {
+            orangeCount++
         } else if (NineBoxArray[i].style.backgroundColor == 'green') {
             greenCount++
         }
     }
     if (redCount == 9) {
-        document.getElementById('DSS').play();
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
-        SixteenBoxes.style.display = 'flex';
-        NineBoxes.style.display = 'none';
+            const confirmBox = confirm('Level 2 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                SixteenBoxes.style.display = 'flex';
+                NineBoxes.style.display = 'none';
+                nav3.style.display = 'flex';
+                Lv3.style.display = 'flex';
+                nav2.style.display = 'none';
+                Lv2.style.display = 'none';
+            }
+        }, 200)
     }
     if (yellowCount == 9) {
-        document.getElementById('DSS').play();
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
-        SixteenBoxes.style.display = 'flex';
-        NineBoxes.style.display = 'none';
+            const confirmBox = confirm('Level 2 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                SixteenBoxes.style.display = 'flex';
+                NineBoxes.style.display = 'none';
+                nav3.style.display = 'flex';
+                Lv3.style.display = 'flex';
+                nav2.style.display = 'none';
+                Lv2.style.display = 'none';
+            }
+        }, 200)
     }
     if (greenCount == 9) {
-        document.getElementById('DSS').play();
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
-        SixteenBoxes.style.display = 'flex';
-        NineBoxes.style.display = 'none';
+            const confirmBox = confirm('Level 2 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                SixteenBoxes.style.display = 'flex';
+                NineBoxes.style.display = 'none';
+                nav3.style.display = 'flex';
+                Lv3.style.display = 'flex';
+                nav2.style.display = 'none';
+                Lv2.style.display = 'none';
+            }
+        }, 200)
     }
-    if (blueCount == 9) {
-        document.getElementById('DSS').play();
+    if (orangeCount == 9) {
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
-        SixteenBoxes.style.display = 'flex';
-        NineBoxes.style.display = 'none';
+            const confirmBox = confirm('Level 2 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                SixteenBoxes.style.display = 'flex';
+                NineBoxes.style.display = 'none';
+                nav3.style.display = 'flex';
+                Lv3.style.display = 'flex';
+                nav2.style.display = 'none';
+                Lv2.style.display = 'none';
+            }
+        }, 200)
     }
 }
 
 function check16Winner() {
     let redCount = 0
     let yellowCount = 0
-    let blueCount = 0
+    let orangeCount = 0
     let greenCount = 0
     for (let i = 0; i < SixteenBoxArray.length; i++) {
         if (SixteenBoxArray[i].style.backgroundColor == 'red') {
             redCount++
         } else if (SixteenBoxArray[i].style.backgroundColor == 'yellow') {
             yellowCount++
-        } else if (SixteenBoxArray[i].style.backgroundColor == 'blue') {
-            blueCount++
-        } else if (SixteenArray[i].style.backgroundColor == 'green') {
+        } else if (SixteenBoxArray[i].style.backgroundColor == 'orange') {
+            orangeCount++
+        } else if (SixteenBoxArray[i].style.backgroundColor == 'green') {
             greenCount++
         }
     }
     if (redCount == 16) {
-        document.getElementById('DSS').play();
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
+            const confirmBox = confirm('Level 3 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                TwentyFiveBoxes.style.display = 'flex';
+                SixteenBoxes.style.display = 'none';
+                nav4.style.display = 'flex';
+                Lv4.style.display = 'flex';
+                nav3.style.display = 'none';
+                Lv3.style.display = 'none';
+            }
+        }, 200)
     }
     if (yellowCount == 16) {
-        document.getElementById('DSS').play();
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
+            const confirmBox = confirm('Level 3 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                TwentyFiveBoxes.style.display = 'flex';
+                SixteenBoxes.style.display = 'none';
+                nav4.style.display = 'flex';
+                Lv4.style.display = 'flex';
+                nav3.style.display = 'none';
+                Lv3.style.display = 'none';
+            }
+        }, 200)
     }
     if (greenCount == 16) {
-        document.getElementById('DSS').play();
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
+            const confirmBox = confirm('Level 3 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                TwentyFiveBoxes.style.display = 'flex';
+                SixteenBoxes.style.display = 'none';
+                nav4.style.display = 'flex';
+                Lv4.style.display = 'flex';
+                nav3.style.display = 'none';
+                Lv3.style.display = 'none';
+            }
+        }, 200)
     }
-    if (blueCount == 16) {
-        document.getElementById('DSS').play();
+    if (orangeCount == 16) {
+        const audio = document.querySelector("#DSS");
+        audio.play();
         setTimeout(function () {
-            alert('You won!!!')
-        }, 200);
+            const confirmBox = confirm('Level 3 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                TwentyFiveBoxes.style.display = 'flex';
+                SixteenBoxes.style.display = 'none';
+                nav4.style.display = 'flex';
+                Lv4.style.display = 'flex';
+                nav3.style.display = 'none';
+                Lv3.style.display = 'none';
+            }
+        }, 200)
+    }
+}
+
+function check25Winner() {
+    let redCount = 0
+    let yellowCount = 0
+    let orangeCount = 0
+    let greenCount = 0
+    for (let i = 0; i < TwentyFiveBoxArray.length; i++) {
+        if (TwentyFiveBoxArray[i].style.backgroundColor == 'red') {
+            redCount++
+        } else if (TwentyFiveBoxArray[i].style.backgroundColor == 'yellow') {
+            yellowCount++
+        } else if (TwentyFiveBoxArray[i].style.backgroundColor == 'orange') {
+            orangeCount++
+        } else if (TwentyFiveBoxArray[i].style.backgroundColor == 'green') {
+            greenCount++
+        }
+    }
+    if (redCount == 25) {
+        const audio = document.querySelector("#DSS");
+        audio.play();
+        setTimeout(function () {
+            const confirmBox = confirm('Level 4 Complete!, Would you like to play again?');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                window.location.reload();
+            }
+        }, 200)
+    }
+    if (yellowCount == 25) {
+        const audio = document.querySelector("#DSS");
+        audio.play();
+        setTimeout(function () {
+            const confirmBox = confirm('Level 4 Complete!, Would you like to play again?');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                window.location.reload();
+            }
+        }, 200)
+    }
+    if (greenCount == 25) {
+        const audio = document.querySelector("#DSS");
+        audio.play();
+        setTimeout(function () {
+            const confirmBox = confirm('Level 4 Complete! Would you like to play again?');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                window.location.reload();
+            }
+        }, 200)
+    }
+    if (orangeCount == 25) {
+        const audio = document.querySelector("#DSS");
+        audio.play();
+        setTimeout(function () {
+            const confirmBox = confirm('Level 4 Complete! Would you like to play again?');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                window.location.reload();
+            }
+        }, 200)
     }
 }
