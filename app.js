@@ -1,10 +1,30 @@
 let colors = ['yellow', 'red', 'green', 'orange']
 
-const FourBoxes = document.getElementById('FourBoxes');
+const fireWorks = document.getElementById('fireWorks')
+const FourBoxes = document.getElementById('FourBoxes')
 const NineBoxes = document.getElementById('NineBoxes');
 const SixteenBoxes = document.getElementById('SixteenBoxes');
 const TwentyFiveBoxes = document.getElementById('TwentyFiveBoxes');
 
+// modal stuff
+const modal = document.getElementById("myModal");
+const btn = document.getElementById("myBtn");
+const span = document.getElementsByClassName("close")[0];
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+span.onclick = function () {
+    modal.style.display = "none";
+}
+window.onclick = function (event) {
+    if (event.target == modal) {
+       win4u();
+    }
+}
+
+
+
+fireWorks.style.display = 'none';
 NineBoxes.style.display = 'none';
 SixteenBoxes.style.display = 'none';
 TwentyFiveBoxes.style.display = 'none';
@@ -116,6 +136,38 @@ let NineBoxArray = [NineBox1, NineBox2, NineBox3, NineBox4, NineBox5, NineBox6, 
 let SixteenBoxArray = [SixteenBox1, SixteenBox2, SixteenBox3, SixteenBox4, SixteenBox5, SixteenBox6, SixteenBox7, SixteenBox8, SixteenBox9, SixteenBox10, SixteenBox11, SixteenBox12, SixteenBox13, SixteenBox14, SixteenBox15, SixteenBox16]
 let TwentyFiveBoxArray = [TwentyFiveBox1, TwentyFiveBox2, TwentyFiveBox3, TwentyFiveBox4, TwentyFiveBox5, TwentyFiveBox6, TwentyFiveBox7, TwentyFiveBox8, TwentyFiveBox9, TwentyFiveBox10, TwentyFiveBox11, TwentyFiveBox12, TwentyFiveBox13, TwentyFiveBox14, TwentyFiveBox15, TwentyFiveBox16, TwentyFiveBox17, TwentyFiveBox18, TwentyFiveBox19, TwentyFiveBox20, TwentyFiveBox21, TwentyFiveBox22, TwentyFiveBox23, TwentyFiveBox24, TwentyFiveBox25]
 
+function u4Win() {
+    const audio = document.querySelector("#DSS");
+    audio.play();
+    setTimeout(function () {
+        const confirmBox = confirm('Level 1 Complete!');
+        if (confirmBox == true) {
+            audio.pause();
+            audio.currentTime = 0;
+            NineBoxes.style.display = 'flex';
+            FourBoxes.style.display = 'none';
+            Lv2.style.display = 'flex';
+            Lv1.style.display = 'none';
+        }
+    }, 200)
+}
+
+function u9Win() { 
+    const audio = document.querySelector("#DSS");
+        audio.play();
+        setTimeout(function () {
+            const confirmBox = confirm('Level 2 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                SixteenBoxes.style.display = 'flex';
+                NineBoxes.style.display = 'none';
+                Lv3.style.display = 'flex';
+                Lv2.style.display = 'none';
+            }
+        }, 200)
+}
+
 function check4Winner() {
     let redCount = 0
     let yellowCount = 0
@@ -132,66 +184,8 @@ function check4Winner() {
             greenCount++
         }
     }
-    if (redCount == 4) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 1 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                NineBoxes.style.display = 'flex';
-                FourBoxes.style.display = 'none';
-                Lv2.style.display = 'flex';
-                Lv1.style.display = 'none';
-            }
-        }, 200)
-    }
-    if (yellowCount == 4) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 1 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                NineBoxes.style.display = 'flex';
-                FourBoxes.style.display = 'none';
-                Lv2.style.display = 'flex';
-                Lv1.style.display = 'none';
-            }
-        }, 200)
-    }
-    if (greenCount == 4) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 1 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                NineBoxes.style.display = 'flex';
-                FourBoxes.style.display = 'none';
-                Lv2.style.display = 'flex';
-                Lv1.style.display = 'none';
-            }
-        }, 200)
-    }
-    if (orangeCount == 4) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 1 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                NineBoxes.style.display = 'flex';
-                FourBoxes.style.display = 'none';
-                Lv2.style.display = 'flex';
-                Lv1.style.display = 'none';
-            }
-        }, 200)
-    }
+    if (redCount === 4 || yellowCount === 4 || greenCount === 4 || orangeCount === 4)
+        u4Win();
 }
 
 function check9Winner() {
@@ -210,65 +204,8 @@ function check9Winner() {
             greenCount++
         }
     }
-    if (redCount == 9) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 2 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                SixteenBoxes.style.display = 'flex';
-                NineBoxes.style.display = 'none';
-                Lv3.style.display = 'flex';
-                Lv2.style.display = 'none';
-            }
-        }, 200)
-    }
-    if (yellowCount == 9) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 2 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                SixteenBoxes.style.display = 'flex';
-                NineBoxes.style.display = 'none';
-                Lv3.style.display = 'flex';
-                Lv2.style.display = 'none';
-            }
-        }, 200)
-    }
-    if (greenCount == 9) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 2 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                SixteenBoxes.style.display = 'flex';
-                NineBoxes.style.display = 'none';
-                Lv3.style.display = 'flex';
-                Lv2.style.display = 'none';
-            }
-        }, 200)
-    }
-    if (orangeCount == 9) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 2 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                SixteenBoxes.style.display = 'flex';
-                NineBoxes.style.display = 'none';
-                Lv3.style.display = 'flex';
-                Lv2.style.display = 'none';
-            }
-        }, 200)
+    if (redCount == 9 || yellowCount == 9 || greenCount == 9 || orangeCount == 9) {
+        u9Win();
     }
 }
 
