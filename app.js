@@ -23,7 +23,7 @@ Lv4.style.display = 'none';
 
 var startTime, endTime;
 const timePara = document.getElementById("timePara");
-const timeSpan = document.getElementById("timespan");
+const timeSpan = document.getElementById("timeSpan");
 
 function start() {
     startTime = new Date();
@@ -34,9 +34,7 @@ function end() {
     var timeDiff = endTime - startTime;
     timeDiff /= 1000;
     var seconds = Math.round(timeDiff);
-    var text = document.createTextNode(seconds + " seconds");
-    timeSpan.appendChild(text);
-    timePara.appendChild(timeSpan);
+    console.log(seconds + " seconds");
 }
 
 FourBox1.addEventListener('click', setRandom4Color)
@@ -205,11 +203,11 @@ function u16Win() {
 }
 
 function u25Win() {
+    end();
     modal4.style.display = "block";
     const audio = document.querySelector("#DSS");
     audio.play();
     fireWorks.style.display = 'flex';
-    end();
     window.onclick = function (event) {
         if (event.target == modal4) {
             window.location.reload();
