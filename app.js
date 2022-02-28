@@ -22,7 +22,6 @@ Lv3.style.display = 'none';
 Lv4.style.display = 'none';
 
 var startTime, endTime;
-const timePara = document.getElementById("timePara");
 const timeSpan = document.getElementById("timeSpan");
 
 function start() {
@@ -34,7 +33,7 @@ function end() {
     var timeDiff = endTime - startTime;
     timeDiff /= 1000;
     var seconds = Math.round(timeDiff);
-    console.log(seconds + " seconds");
+    timeSpan.textContent = seconds + " seconds";
 }
 
 FourBox1.addEventListener('click', setRandom4Color)
