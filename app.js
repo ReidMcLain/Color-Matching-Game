@@ -10,7 +10,7 @@ const modal1 = document.getElementById("myModal1");
 const modal2 = document.getElementById("myModal2");
 const modal3 = document.getElementById("myModal3");
 const modal4 = document.getElementById("myModal4");
-
+var span = document.getElementsByClassName("close")[0];
 
 fireWorks.style.display = 'none';
 NineBoxes.style.display = 'none';
@@ -145,7 +145,7 @@ let NineBoxArray = [NineBox1, NineBox2, NineBox3, NineBox4, NineBox5, NineBox6, 
 let SixteenBoxArray = [SixteenBox1, SixteenBox2, SixteenBox3, SixteenBox4, SixteenBox5, SixteenBox6, SixteenBox7, SixteenBox8, SixteenBox9, SixteenBox10, SixteenBox11, SixteenBox12, SixteenBox13, SixteenBox14, SixteenBox15, SixteenBox16]
 let TwentyFiveBoxArray = [TwentyFiveBox1, TwentyFiveBox2, TwentyFiveBox3, TwentyFiveBox4, TwentyFiveBox5, TwentyFiveBox6, TwentyFiveBox7, TwentyFiveBox8, TwentyFiveBox9, TwentyFiveBox10, TwentyFiveBox11, TwentyFiveBox12, TwentyFiveBox13, TwentyFiveBox14, TwentyFiveBox15, TwentyFiveBox16, TwentyFiveBox17, TwentyFiveBox18, TwentyFiveBox19, TwentyFiveBox20, TwentyFiveBox21, TwentyFiveBox22, TwentyFiveBox23, TwentyFiveBox24, TwentyFiveBox25]
 
-function u4Win(event) {
+function u4Win() {
     modal1.style.display = "block";
     const audio = document.querySelector("#DSS");
     audio.play();
@@ -170,7 +170,7 @@ function u9Win() {
     audio.play();
     fireWorks.style.display = 'flex';
     window.onclick = function (event) {
-        if (event.target == modal2) {
+        if (event.target == modal2 ) {
             modal2.style.display = 'none';
             audio.pause();
             audio.currentTime = 0;
