@@ -10,7 +10,6 @@ const modal1 = document.getElementById("myModal1");
 const modal2 = document.getElementById("myModal2");
 const modal3 = document.getElementById("myModal3");
 const modal4 = document.getElementById("myModal4");
-var span = document.getElementsByClassName("close")[0];
 
 fireWorks.style.display = 'none';
 NineBoxes.style.display = 'none';
@@ -24,9 +23,15 @@ Lv4.style.display = 'none';
 var startTime, endTime;
 const timeSpan = document.getElementById("timeSpan");
 
-function start() {
-    startTime = new Date();
-};
+var start = (function () {
+    var executed = false;
+    return function () {
+        if (!executed) {
+            executed = true;
+            startTime = new Date();
+        }
+    };
+})();
 
 function end() {
     endTime = new Date();
@@ -169,7 +174,7 @@ function u9Win() {
     audio.play();
     fireWorks.style.display = 'flex';
     window.onclick = function (event) {
-        if (event.target == modal2 ) {
+        if (event.target == modal2) {
             modal2.style.display = 'none';
             audio.pause();
             audio.currentTime = 0;
