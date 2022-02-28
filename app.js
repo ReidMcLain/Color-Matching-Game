@@ -10,6 +10,7 @@ const modal1 = document.getElementById("myModal1");
 const modal2 = document.getElementById("myModal2");
 const modal3 = document.getElementById("myModal3");
 const modal4 = document.getElementById("myModal4");
+const timeSpan = document.getElementById("timeSpan");
 
 fireWorks.style.display = 'none';
 NineBoxes.style.display = 'none';
@@ -21,7 +22,6 @@ Lv3.style.display = 'none';
 Lv4.style.display = 'none';
 
 var startTime, endTime;
-const timeSpan = document.getElementById("timeSpan");
 
 var start = (function () {
     var executed = false;
