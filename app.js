@@ -10,6 +10,7 @@ const TwentyFiveBoxes = document.getElementById('TwentyFiveBoxes');
 const modal = document.getElementById("myModal");
 const btn = document.getElementById("myBtn");
 const span = document.getElementsByClassName("close")[0];
+
 btn.onclick = function () {
     modal.style.display = "block";
 }
@@ -18,11 +19,8 @@ span.onclick = function () {
 }
 window.onclick = function (event) {
     if (event.target == modal) {
-       win4u();
     }
 }
-
-
 
 fireWorks.style.display = 'none';
 NineBoxes.style.display = 'none';
@@ -168,6 +166,22 @@ function u9Win() {
         }, 200)
 }
 
+function u16Win() { 
+    const audio = document.querySelector("#DSS");
+        audio.play();
+        setTimeout(function () {
+            const confirmBox = confirm('Level 3 Complete!');
+            if (confirmBox == true) {
+                audio.pause();
+                audio.currentTime = 0;
+                TwentyFiveBoxes.style.display = 'flex';
+                SixteenBoxes.style.display = 'none';
+                Lv4.style.display = 'flex';
+                Lv3.style.display = 'none';
+            }
+        }, 200)
+}
+
 function check4Winner() {
     let redCount = 0
     let yellowCount = 0
@@ -225,67 +239,12 @@ function check16Winner() {
             greenCount++
         }
     }
-    if (redCount == 16) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 3 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                TwentyFiveBoxes.style.display = 'flex';
-                SixteenBoxes.style.display = 'none';
-                Lv4.style.display = 'flex';
-                Lv3.style.display = 'none';
-            }
-        }, 200)
-    }
-    if (yellowCount == 16) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 3 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                TwentyFiveBoxes.style.display = 'flex';
-                SixteenBoxes.style.display = 'none';
-                Lv4.style.display = 'flex';
-                Lv3.style.display = 'none';
-            }
-        }, 200)
-    }
-    if (greenCount == 16) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 3 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                TwentyFiveBoxes.style.display = 'flex';
-                SixteenBoxes.style.display = 'none';
-                Lv4.style.display = 'flex';
-                Lv3.style.display = 'none';
-            }
-        }, 200)
-    }
-    if (orangeCount == 16) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 3 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                TwentyFiveBoxes.style.display = 'flex';
-                SixteenBoxes.style.display = 'none';
-                Lv4.style.display = 'flex';
-                Lv3.style.display = 'none';
-            }
-        }, 200)
+    if (redCount == 16 || yellowCount == 16 || greenCount == 16 || orangeCount == 16) {
+        u16Win();
     }
 }
+
+
 
 function check25Winner() {
     let redCount = 0
@@ -303,7 +262,7 @@ function check25Winner() {
             greenCount++
         }
     }
-    if (redCount == 25) {
+    if (redCount == 16 || yellowCount == 16 || greenCount == 16 || orangeCount == 16) {
         const audio = document.querySelector("#DSS");
         audio.play();
         setTimeout(function () {
