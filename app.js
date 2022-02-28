@@ -6,21 +6,11 @@ const NineBoxes = document.getElementById('NineBoxes');
 const SixteenBoxes = document.getElementById('SixteenBoxes');
 const TwentyFiveBoxes = document.getElementById('TwentyFiveBoxes');
 
-// modal stuff
-const modal = document.getElementById("myModal");
-const btn = document.getElementById("myBtn");
-const span = document.getElementsByClassName("close")[0];
+const modal1 = document.getElementById("myModal1");
+const modal2 = document.getElementById("myModal2");
+const modal3 = document.getElementById("myModal3");
+const modal4 = document.getElementById("myModal4");
 
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-span.onclick = function () {
-    modal.style.display = "none";
-}
-window.onclick = function (event) {
-    if (event.target == modal) {
-    }
-}
 
 fireWorks.style.display = 'none';
 NineBoxes.style.display = 'none';
@@ -31,10 +21,33 @@ Lv2.style.display = 'none';
 Lv3.style.display = 'none';
 Lv4.style.display = 'none';
 
+var startTime, endTime;
+const timePara = document.getElementById("timePara");
+const timeSpan = document.getElementById("timespan");
+
+function start() {
+    startTime = new Date();
+};
+
+function end() {
+    endTime = new Date();
+    var timeDiff = endTime - startTime;
+    timeDiff /= 1000;
+    var seconds = Math.round(timeDiff);
+    var text = document.createTextNode(seconds + " seconds");
+    timeSpan.appendChild(text);
+    timePara.appendChild(timeSpan);
+}
+
 FourBox1.addEventListener('click', setRandom4Color)
 FourBox2.addEventListener('click', setRandom4Color)
 FourBox3.addEventListener('click', setRandom4Color)
 FourBox4.addEventListener('click', setRandom4Color)
+
+FourBox1.addEventListener('click', start)
+FourBox2.addEventListener('click', start)
+FourBox3.addEventListener('click', start)
+FourBox4.addEventListener('click', start)
 
 NineBox1.addEventListener('click', setRandom9Color)
 NineBox2.addEventListener('click', setRandom9Color)
@@ -134,52 +147,74 @@ let NineBoxArray = [NineBox1, NineBox2, NineBox3, NineBox4, NineBox5, NineBox6, 
 let SixteenBoxArray = [SixteenBox1, SixteenBox2, SixteenBox3, SixteenBox4, SixteenBox5, SixteenBox6, SixteenBox7, SixteenBox8, SixteenBox9, SixteenBox10, SixteenBox11, SixteenBox12, SixteenBox13, SixteenBox14, SixteenBox15, SixteenBox16]
 let TwentyFiveBoxArray = [TwentyFiveBox1, TwentyFiveBox2, TwentyFiveBox3, TwentyFiveBox4, TwentyFiveBox5, TwentyFiveBox6, TwentyFiveBox7, TwentyFiveBox8, TwentyFiveBox9, TwentyFiveBox10, TwentyFiveBox11, TwentyFiveBox12, TwentyFiveBox13, TwentyFiveBox14, TwentyFiveBox15, TwentyFiveBox16, TwentyFiveBox17, TwentyFiveBox18, TwentyFiveBox19, TwentyFiveBox20, TwentyFiveBox21, TwentyFiveBox22, TwentyFiveBox23, TwentyFiveBox24, TwentyFiveBox25]
 
-function u4Win() {
+function u4Win(event) {
+    modal1.style.display = "block";
     const audio = document.querySelector("#DSS");
     audio.play();
-    setTimeout(function () {
-        const confirmBox = confirm('Level 1 Complete!');
-        if (confirmBox == true) {
+    fireWorks.style.display = 'flex';
+    window.onclick = function (event) {
+        if (event.target == modal1) {
+            modal1.style.display = 'none';
             audio.pause();
             audio.currentTime = 0;
             NineBoxes.style.display = 'flex';
             FourBoxes.style.display = 'none';
             Lv2.style.display = 'flex';
-            Lv1.style.display = 'none';
+            Lv1.style.display = 'none'
+            fireWorks.style.display = 'none';
         }
-    }, 200)
+    }
 }
 
-function u9Win() { 
+function u9Win() {
+    modal2.style.display = "block";
     const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 2 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                SixteenBoxes.style.display = 'flex';
-                NineBoxes.style.display = 'none';
-                Lv3.style.display = 'flex';
-                Lv2.style.display = 'none';
-            }
-        }, 200)
+    audio.play();
+    fireWorks.style.display = 'flex';
+    window.onclick = function (event) {
+        if (event.target == modal2) {
+            modal2.style.display = 'none';
+            audio.pause();
+            audio.currentTime = 0;
+            SixteenBoxes.style.display = 'flex';
+            NineBoxes.style.display = 'none';
+            Lv3.style.display = 'flex';
+            Lv2.style.display = 'none'
+            fireWorks.style.display = 'none';
+        }
+    }
 }
 
-function u16Win() { 
+function u16Win() {
+    modal3.style.display = "block";
     const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 3 Complete!');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                TwentyFiveBoxes.style.display = 'flex';
-                SixteenBoxes.style.display = 'none';
-                Lv4.style.display = 'flex';
-                Lv3.style.display = 'none';
-            }
-        }, 200)
+    audio.play();
+    fireWorks.style.display = 'flex';
+    window.onclick = function (event) {
+        if (event.target == modal3) {
+            modal3.style.display = 'none';
+            audio.pause();
+            audio.currentTime = 0;
+            TwentyFiveBoxes.style.display = 'flex';
+            SixteenBoxes.style.display = 'none';
+            Lv4.style.display = 'flex';
+            Lv3.style.display = 'none'
+            fireWorks.style.display = 'none';
+        }
+    }
+}
+
+function u25Win() {
+    modal4.style.display = "block";
+    const audio = document.querySelector("#DSS");
+    audio.play();
+    fireWorks.style.display = 'flex';
+    end();
+    window.onclick = function (event) {
+        if (event.target == modal4) {
+            window.location.reload();
+        }
+    }
 }
 
 function check4Winner() {
@@ -244,8 +279,6 @@ function check16Winner() {
     }
 }
 
-
-
 function check25Winner() {
     let redCount = 0
     let yellowCount = 0
@@ -262,52 +295,7 @@ function check25Winner() {
             greenCount++
         }
     }
-    if (redCount == 16 || yellowCount == 16 || greenCount == 16 || orangeCount == 16) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 4 Complete!, Would you like to play again?');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                window.location.reload();
-            }
-        }, 200)
-    }
-    if (yellowCount == 25) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 4 Complete!, Would you like to play again?');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                window.location.reload();
-            }
-        }, 200)
-    }
-    if (greenCount == 25) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 4 Complete! Would you like to play again?');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                window.location.reload();
-            }
-        }, 200)
-    }
-    if (orangeCount == 25) {
-        const audio = document.querySelector("#DSS");
-        audio.play();
-        setTimeout(function () {
-            const confirmBox = confirm('Level 4 Complete! Would you like to play again?');
-            if (confirmBox == true) {
-                audio.pause();
-                audio.currentTime = 0;
-                window.location.reload();
-            }
-        }, 200)
+    if (redCount == 25 || yellowCount == 25 || greenCount == 25 || orangeCount == 25) {
+        u25Win();
     }
 }
