@@ -213,16 +213,12 @@ function u25Win() {
     audio.play();
     fireWorks.style.display = 'flex';
 
-    // Add "Play Again" button to the modal content
-    const modalContent = document.querySelector(".modal-content");
-    modalContent.innerHTML += '<p id="timePara">Congratulations! You finished The Box in <span id="timeSpan"></span>, Click the button to play again</p>';
-    modalContent.innerHTML += '<button id="playAgainButton">Play Again</button>';
-
     // Add click event listener to the "Play Again" button
     document.getElementById('playAgainButton').addEventListener('click', function() {
         location.reload(); // Reload the page
     });
 }
+
 function check4Winner() {
     let redCount = 0
     let yellowCount = 0
