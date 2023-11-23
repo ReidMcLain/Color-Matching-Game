@@ -215,7 +215,7 @@ function u25Win() {
 
     // Add click event listener to the "Play Again" button
     document.getElementById('playAgainButton').addEventListener('click', function() {
-        location.reload(); // Reload the page
+        window.location.reload(); // Reload the page
     });
 }
 
